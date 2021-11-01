@@ -8,13 +8,13 @@ public class ExceptionUserRegistrationTest {
 
     @Test
     public void givenFirstName_IsProper_ReturnTrue() {
-        boolean actualResult = exceptionUserRegistration.email("Afroj");
+        boolean actualResult = exceptionUserRegistration.firstName("Afroj");
         Assert.assertEquals(true, actualResult);
     }
 
     @Test
     public void givenFirstName_IsProper_ReturnFalse() {
-        boolean actualResult = exceptionUserRegistration.email("afroj");
+        boolean actualResult = exceptionUserRegistration.firstName("afroj");
         Assert.assertEquals(false, actualResult);
     }
 
@@ -51,6 +51,18 @@ public class ExceptionUserRegistrationTest {
     @Test
     public void givenMobileNumber_IsNotProper_ReturnFalse() {
         boolean actualResult = exceptionUserRegistration.phoneNumber("91 907552833047");
+        Assert.assertEquals(false, actualResult);
+    }
+
+    @Test
+    public void givenPasswordRule1_IsProper_ReturnTrue() {
+        boolean actualResult = exceptionUserRegistration.passwordRule1("afroj78Ra");
+        Assert.assertEquals(true, actualResult);
+    }
+
+    @Test
+    public void givenPasswordRule1_IsNotProper_ReturnFalse() {
+        boolean actualResult = exceptionUserRegistration.passwordRule1("jhsjhj");
         Assert.assertEquals(false, actualResult);
     }
 }
