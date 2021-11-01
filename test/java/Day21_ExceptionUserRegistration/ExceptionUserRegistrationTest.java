@@ -65,4 +65,16 @@ public class ExceptionUserRegistrationTest {
         boolean actualResult = exceptionUserRegistration.passwordRule1("jhsjhj");
         Assert.assertEquals(false, actualResult);
     }
+
+    @Test
+    public void givenPasswordRule2_IsProper_ReturnTrue() {
+        boolean actualResult = exceptionUserRegistration.passwordRule2("qwgthRLjkdl");
+        Assert.assertEquals(true, actualResult);
+    }
+
+    @Test
+    public void givenPasswordRule2_IsNotProper_ReturnFalse() {
+        boolean actualResult = exceptionUserRegistration.passwordRule2("jnsdjcvcp");
+        Assert.assertEquals(false, actualResult);
+    }
 }

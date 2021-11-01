@@ -39,4 +39,11 @@ public class ExceptionUserRegistration {
         Matcher matcher = pattern.matcher(str);
         return matcher.matches();
     }
+
+    //validating password rule2
+    public boolean passwordRule2(String str) {
+        Pattern pattern = Pattern.compile("^(?=.*[A-Z])([a-zA-Z0-9-_.]){8,}$");
+        Matcher matcher = pattern.matcher(str);
+        return matcher.matches();
+    }
 }
