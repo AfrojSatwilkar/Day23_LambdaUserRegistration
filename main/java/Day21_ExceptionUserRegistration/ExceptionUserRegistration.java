@@ -25,4 +25,11 @@ public class ExceptionUserRegistration {
         Matcher matcher = pattern.matcher(str);
         return matcher.matches();
     }
+
+    //validating phone number
+    public boolean phoneNumber(String str) {
+        Pattern pattern = Pattern.compile("^(\\+?\\d{2}?\\s{1})?(\\d{10})$");
+        Matcher matcher = pattern.matcher(str);
+        return matcher.matches();
+    }
 }
