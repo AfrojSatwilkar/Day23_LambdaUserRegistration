@@ -7,14 +7,14 @@ public class ExceptionUserRegistrationTest {
     ExceptionUserRegistration exceptionUserRegistration = new ExceptionUserRegistration();
 
     @Test
-    public void givenFirstName_IsProper_ReturnTrue() {
-        boolean actualResult = exceptionUserRegistration.firstName("Afroj");
+    public void givenLastName_IsProper_ReturnTrue() {
+        boolean actualResult = exceptionUserRegistration.lastName("Satwilkar");
         Assert.assertEquals(true, actualResult);
     }
 
     @Test
-    public void givenFirstName_IsProper_ReturnFalse() {
-        boolean actualResult = exceptionUserRegistration.firstName("afroj");
+    public void givenLastName_IsProper_ReturnFalse() {
+        boolean actualResult = exceptionUserRegistration.lastName("satwilkar");
         Assert.assertEquals(false, actualResult);
     }
 }
